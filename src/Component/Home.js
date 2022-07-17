@@ -7,11 +7,11 @@ export default function Home() {
     const [todos, setTodos] = useState(dummytodo);
     const handleNewTodos = (newtodo) => {
 
-        setTodos([...Todos, newtodo]);
+        setTodos([...todos, newtodo]);
     }
     return (
         <div className="bg-gray-300 border-2 border-teal-500 flex-row m-10 rounded ">
-            <NewTodos onGet={handleNewTodos} />
+            <NewTodos onTodo={handleNewTodos} />
             <Todos todos={todos} />
         </div>
     )
