@@ -12,6 +12,7 @@ export default function Home() {
     return (
         <div className="bg-gray-300 border-2 border-teal-500 flex-row m-10 rounded ">
             <NewTodos onTodo={handleNewTodos} />
+			
             <Todos todos={todos} />
         </div>
     )
