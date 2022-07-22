@@ -8,21 +8,21 @@ import NewTodos from './NewTodos';
 const dummytodo = ["todo1", "todo2"];
 export default function Home() {
     const [todos, setTodos] = useState([]);
-    const handleNewTodos = (newtodo) => {
-  //       setTodos((prevTodos)=>{
+    const handleNewTodos = (todo) => {
+        setTodos((prevTodos)=>{
 
-  //         return [...prevTodos, {id:uuidv4() ,newtodo}];
+          return [...prevTodos, {id:uuidv4() ,todo}];
 		
 			
-		// })
-		console.log(newtodo);
+		})
+		
+		
         
     }
     return (
         <div className="bg-gray-300 border-2 border-teal-500 flex-row m-10 rounded ">
             <NewTodos onTodo={handleNewTodos} />
-			
-            <Todos todos={todos} />
+			<Todos todos={todos}/>
         </div>
     )
 }

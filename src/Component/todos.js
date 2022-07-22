@@ -1,14 +1,13 @@
 import React from 'react'
-import { v4 as uuidv4 } from 'uuid'
 
 
 import Todo from './todo'
 export default function Todos(props) {
     return (
         <div>
-            {props.todos.map((todo, index) => (
+            {props.todos.map((todo) => (
 
-                <Todo key={index} id={props.id} todo={todo} />
+                <Todo key={todo.id} id={todo.id} todo={todo.todo} />
             ))}
 
         </div>
