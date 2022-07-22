@@ -7,7 +7,7 @@ export default function Todos(props) {
         <div>
             {props.todos.map((todo) => (
 
-                <Todo key={todo.id} id={todo.id} todo={todo.todo} />
+                <Todo key={todo.id} id={todo.id} todo={todo.todo} onRemoveTodo={props.onRemoveTodo}/>
             ))}
 
         </div>
